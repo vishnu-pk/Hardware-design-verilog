@@ -1,0 +1,180 @@
+|part3
+SW[0] => din[0].IN2
+SW[1] => din[1].IN2
+SW[2] => din[2].IN2
+SW[3] => din[3].IN2
+SW[4] => addr[0].IN2
+SW[5] => addr[1].IN2
+SW[6] => addr[2].IN2
+SW[7] => addr[3].IN2
+SW[8] => addr[4].IN2
+SW[9] => wren.IN1
+LEDR[0] << <GND>
+LEDR[1] << <GND>
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << dout[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] << dout[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] << dout[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] << dout[3].DB_MAX_OUTPUT_PORT_TYPE
+KEY[0] => clock.IN1
+KEY[1] => ~NO_FANOUT~
+HEX0[0] << decoder:d4.port1
+HEX0[1] << decoder:d4.port1
+HEX0[2] << decoder:d4.port1
+HEX0[3] << decoder:d4.port1
+HEX0[4] << decoder:d4.port1
+HEX0[5] << decoder:d4.port1
+HEX0[6] << decoder:d4.port1
+HEX0[7] << decoder:d4.port1
+HEX1[0] << <VCC>
+HEX1[1] << <VCC>
+HEX1[2] << <VCC>
+HEX1[3] << <VCC>
+HEX1[4] << <VCC>
+HEX1[5] << <VCC>
+HEX1[6] << <VCC>
+HEX1[7] << <VCC>
+HEX2[0] << decoder:d3.port1
+HEX2[1] << decoder:d3.port1
+HEX2[2] << decoder:d3.port1
+HEX2[3] << decoder:d3.port1
+HEX2[4] << decoder:d3.port1
+HEX2[5] << decoder:d3.port1
+HEX2[6] << decoder:d3.port1
+HEX2[7] << decoder:d3.port1
+HEX3[0] << <VCC>
+HEX3[1] << <VCC>
+HEX3[2] << <VCC>
+HEX3[3] << <VCC>
+HEX3[4] << <VCC>
+HEX3[5] << <VCC>
+HEX3[6] << <VCC>
+HEX3[7] << <VCC>
+HEX4[0] << decoder:d1.port1
+HEX4[1] << decoder:d1.port1
+HEX4[2] << decoder:d1.port1
+HEX4[3] << decoder:d1.port1
+HEX4[4] << decoder:d1.port1
+HEX4[5] << decoder:d1.port1
+HEX4[6] << decoder:d1.port1
+HEX4[7] << decoder:d1.port1
+HEX5[0] << decoder:d2.port1
+HEX5[1] << decoder:d2.port1
+HEX5[2] << decoder:d2.port1
+HEX5[3] << decoder:d2.port1
+HEX5[4] << decoder:d2.port1
+HEX5[5] << decoder:d2.port1
+HEX5[6] << decoder:d2.port1
+HEX5[7] << decoder:d2.port1
+
+
+|part3|memory1:comb_18
+addr[0] => memory_array.waddr_a[0].DATAIN
+addr[0] => memory_array.WADDR
+addr[0] => memory_array.RADDR
+addr[1] => memory_array.waddr_a[1].DATAIN
+addr[1] => memory_array.WADDR1
+addr[1] => memory_array.RADDR1
+addr[2] => memory_array.waddr_a[2].DATAIN
+addr[2] => memory_array.WADDR2
+addr[2] => memory_array.RADDR2
+addr[3] => memory_array.waddr_a[3].DATAIN
+addr[3] => memory_array.WADDR3
+addr[3] => memory_array.RADDR3
+addr[4] => memory_array.waddr_a[4].DATAIN
+addr[4] => memory_array.WADDR4
+addr[4] => memory_array.RADDR4
+clock => memory_array.we_a.CLK
+clock => memory_array.waddr_a[4].CLK
+clock => memory_array.waddr_a[3].CLK
+clock => memory_array.waddr_a[2].CLK
+clock => memory_array.waddr_a[1].CLK
+clock => memory_array.waddr_a[0].CLK
+clock => memory_array.data_a[3].CLK
+clock => memory_array.data_a[2].CLK
+clock => memory_array.data_a[1].CLK
+clock => memory_array.data_a[0].CLK
+clock => dout[0]~reg0.CLK
+clock => dout[1]~reg0.CLK
+clock => dout[2]~reg0.CLK
+clock => dout[3]~reg0.CLK
+clock => memory_array.CLK0
+din[0] => memory_array.data_a[0].DATAIN
+din[0] => memory_array.DATAIN
+din[1] => memory_array.data_a[1].DATAIN
+din[1] => memory_array.DATAIN1
+din[2] => memory_array.data_a[2].DATAIN
+din[2] => memory_array.DATAIN2
+din[3] => memory_array.data_a[3].DATAIN
+din[3] => memory_array.DATAIN3
+wren => memory_array.we_a.DATAIN
+wren => memory_array.WE
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|decoder:d1
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+z[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+z[7] <= <VCC>
+
+
+|part3|decoder:d2
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+z[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+z[7] <= <VCC>
+
+
+|part3|decoder:d3
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+z[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+z[7] <= <VCC>
+
+
+|part3|decoder:d4
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+z[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+z[7] <= <VCC>
+
+

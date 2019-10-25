@@ -1,0 +1,206 @@
+|Part2
+SW[0] => pass[0].IN1
+SW[1] => pass[1].IN1
+SW[2] => pass[2].IN1
+SW[3] => pass[3].IN1
+SW[4] => pass[4].IN1
+SW[5] => pass[5].IN1
+SW[6] => pass[6].IN1
+SW[7] => pass[7].IN1
+SW[8] => pass[8].IN1
+SW[9] => pass[9].IN1
+KEY[0] => reset.CLK
+KEY[1] => clock.IN2
+HEX0[0] << decoder0:d6.port1
+HEX0[1] << decoder0:d6.port1
+HEX0[2] << decoder0:d6.port1
+HEX0[3] << decoder0:d6.port1
+HEX0[4] << decoder0:d6.port1
+HEX0[5] << decoder0:d6.port1
+HEX0[6] << decoder0:d6.port1
+HEX1[0] << decoder1:d5.port1
+HEX1[1] << decoder1:d5.port1
+HEX1[2] << decoder1:d5.port1
+HEX1[3] << decoder1:d5.port1
+HEX1[4] << decoder1:d5.port1
+HEX1[5] << decoder1:d5.port1
+HEX1[6] << decoder1:d5.port1
+HEX2[0] << decoder2:d4.port1
+HEX2[1] << decoder2:d4.port1
+HEX2[2] << decoder2:d4.port1
+HEX2[3] << decoder2:d4.port1
+HEX2[4] << decoder2:d4.port1
+HEX2[5] << decoder2:d4.port1
+HEX2[6] << decoder2:d4.port1
+HEX3[0] << decoder3:d3.port1
+HEX3[1] << decoder3:d3.port1
+HEX3[2] << decoder3:d3.port1
+HEX3[3] << decoder3:d3.port1
+HEX3[4] << decoder3:d3.port1
+HEX3[5] << decoder3:d3.port1
+HEX3[6] << decoder3:d3.port1
+HEX4[0] << decoder4:d2.port1
+HEX4[1] << decoder4:d2.port1
+HEX4[2] << decoder4:d2.port1
+HEX4[3] << decoder4:d2.port1
+HEX4[4] << decoder4:d2.port1
+HEX4[5] << decoder4:d2.port1
+HEX4[6] << decoder4:d2.port1
+HEX5[0] << decoder5:d1.port1
+HEX5[1] << decoder5:d1.port1
+HEX5[2] << decoder5:d1.port1
+HEX5[3] << decoder5:d1.port1
+HEX5[4] << decoder5:d1.port1
+HEX5[5] << decoder5:d1.port1
+HEX5[6] << decoder5:d1.port1
+LEDR[0] << reset.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << clock.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+
+
+|Part2|compute:com1
+clock => ~NO_FANOUT~
+pass[0] => Equal0.IN19
+pass[1] => Equal0.IN18
+pass[2] => Equal0.IN17
+pass[3] => Equal0.IN16
+pass[4] => Equal0.IN15
+pass[5] => Equal0.IN14
+pass[6] => Equal0.IN13
+pass[7] => Equal0.IN12
+pass[8] => Equal0.IN11
+pass[9] => Equal0.IN10
+reset => c.DATAA
+reset => c.DATAB
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part2|Dflipflop:dff1
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+async_reset => Q[0]~reg0.ACLR
+async_reset => Q[1]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part2|decoder5:d1
+bcd[0] => Mux0.IN5
+bcd[0] => Mux1.IN5
+bcd[0] => Mux2.IN5
+bcd[0] => Mux3.IN5
+bcd[1] => Mux0.IN4
+bcd[1] => Mux1.IN4
+bcd[1] => Mux2.IN4
+bcd[1] => Mux3.IN4
+z[0] <= z[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= <GND>
+z[5] <= <GND>
+z[6] <= z[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part2|decoder4:d2
+bcd[0] => Mux0.IN5
+bcd[0] => Mux1.IN5
+bcd[0] => Mux2.IN5
+bcd[0] => Mux3.IN5
+bcd[0] => Mux4.IN5
+bcd[1] => Mux0.IN4
+bcd[1] => Mux1.IN4
+bcd[1] => Mux2.IN4
+bcd[1] => Mux3.IN4
+bcd[1] => Mux4.IN4
+z[0] <= z[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= <GND>
+z[5] <= z[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= z[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part2|decoder3:d3
+bcd[0] => Mux0.IN5
+bcd[0] => Mux1.IN5
+bcd[0] => Mux2.IN5
+bcd[0] => Mux3.IN5
+bcd[1] => Mux0.IN4
+bcd[1] => Mux1.IN4
+bcd[1] => Mux2.IN4
+bcd[1] => Mux3.IN4
+z[0] <= z[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= <GND>
+z[5] <= <GND>
+z[6] <= z[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part2|decoder2:d4
+bcd[0] => Mux0.IN5
+bcd[0] => Mux1.IN5
+bcd[0] => Mux2.IN5
+bcd[0] => Mux3.IN5
+bcd[1] => Mux0.IN4
+bcd[1] => Mux1.IN4
+bcd[1] => Mux2.IN4
+bcd[1] => Mux3.IN4
+z[0] <= z[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= <GND>
+z[5] <= z[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= z[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part2|decoder1:d5
+bcd[0] => Mux0.IN5
+bcd[0] => Mux1.IN5
+bcd[0] => Mux2.IN5
+bcd[0] => Mux3.IN5
+bcd[1] => Mux0.IN4
+bcd[1] => Mux1.IN4
+bcd[1] => Mux2.IN4
+bcd[1] => Mux3.IN4
+z[0] <= <GND>
+z[1] <= z[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= <GND>
+z[4] <= z[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= z[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= z[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part2|decoder0:d6
+bcd[0] => Mux0.IN5
+bcd[0] => Mux1.IN5
+bcd[0] => Mux2.IN5
+bcd[0] => Mux3.IN5
+bcd[1] => Mux0.IN4
+bcd[1] => Mux1.IN4
+bcd[1] => Mux2.IN4
+bcd[1] => Mux3.IN4
+z[0] <= <VCC>
+z[1] <= z[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= z[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= z[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= z[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

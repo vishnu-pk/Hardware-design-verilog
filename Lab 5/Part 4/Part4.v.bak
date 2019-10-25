@@ -1,0 +1,75 @@
+module Part4(SW,KEY,LEDR,CLOCK_50);
+input CLOCK_50;
+input [1:0] KEY;
+input [9:0] SW;
+output [9:0] LEDR;
+
+
+always @ (negedge KEY[1])
+begin
+case(SW[2:0])
+	3'b000: begin
+	dot();
+	dash();
+	end
+	3'b001: begin
+	dash();
+	dot();
+	dot();
+	dot();
+	end
+	3'b010: begin
+	dash();
+	dot();
+	dash();
+	dot();
+	3'b011: begin
+	dash();
+	dot();
+	dot();
+	end
+	3'b100: begin
+	dot();
+	end
+	3'b101: begin
+	dot();
+	dot();
+	dash();
+	dot();
+	end
+	3'b110: begin 
+	dash();
+	dash();
+	dot();
+	end	
+	3'b111: begin 
+	dot();
+	dot();
+	dot();
+	dot();
+	end
+
+	
+	
+
+
+
+
+endcase
+
+end 
+
+ 
+ 
+ 
+
+endmodule 
+
+
+module dot()
+
+endmodule
+
+module dash()
+
+endmodule 

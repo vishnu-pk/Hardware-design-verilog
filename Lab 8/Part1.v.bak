@@ -1,0 +1,5 @@
+module Part1();
+
+module ram32x4 (input [4:0] address, input clock, input [3:0] data, input wren, output [3:0] q);
+
+endmodule 

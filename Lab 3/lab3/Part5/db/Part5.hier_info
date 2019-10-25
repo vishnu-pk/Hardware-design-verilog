@@ -1,0 +1,525 @@
+|Part5
+SW[0] => A[0].IN3
+SW[1] => A[1].IN3
+SW[2] => A[2].IN3
+SW[3] => A[3].IN3
+SW[4] => A[4].IN3
+SW[5] => A[5].IN3
+SW[6] => A[6].IN3
+SW[7] => A[7].IN3
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+LEDR[0] << fourfa:ffa1.port4
+LEDR[1] << <GND>
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+KEY[0] => resetbutton.IN1
+KEY[1] => clock.IN1
+HEX0[0] << decoder:d3.port1
+HEX0[1] << decoder:d3.port1
+HEX0[2] << decoder:d3.port1
+HEX0[3] << decoder:d3.port1
+HEX0[4] << decoder:d3.port1
+HEX0[5] << decoder:d3.port1
+HEX0[6] << decoder:d3.port1
+HEX1[0] << decoder:d4.port1
+HEX1[1] << decoder:d4.port1
+HEX1[2] << decoder:d4.port1
+HEX1[3] << decoder:d4.port1
+HEX1[4] << decoder:d4.port1
+HEX1[5] << decoder:d4.port1
+HEX1[6] << decoder:d4.port1
+HEX2[0] << decoder:d1.port1
+HEX2[1] << decoder:d1.port1
+HEX2[2] << decoder:d1.port1
+HEX2[3] << decoder:d1.port1
+HEX2[4] << decoder:d1.port1
+HEX2[5] << decoder:d1.port1
+HEX2[6] << decoder:d1.port1
+HEX3[0] << decoder:d2.port1
+HEX3[1] << decoder:d2.port1
+HEX3[2] << decoder:d2.port1
+HEX3[3] << decoder:d2.port1
+HEX3[4] << decoder:d2.port1
+HEX3[5] << decoder:d2.port1
+HEX3[6] << decoder:d2.port1
+HEX4[0] << decoder:d5.port1
+HEX4[1] << decoder:d5.port1
+HEX4[2] << decoder:d5.port1
+HEX4[3] << decoder:d5.port1
+HEX4[4] << decoder:d5.port1
+HEX4[5] << decoder:d5.port1
+HEX4[6] << decoder:d5.port1
+HEX5[0] << decoder:d6.port1
+HEX5[1] << decoder:d6.port1
+HEX5[2] << decoder:d6.port1
+HEX5[3] << decoder:d6.port1
+HEX5[4] << decoder:d6.port1
+HEX5[5] << decoder:d6.port1
+HEX5[6] << decoder:d6.port1
+
+
+|Part5|reg8:d8bit1
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLK => Q[4]~reg0.CLK
+CLK => Q[5]~reg0.CLK
+CLK => Q[6]~reg0.CLK
+CLK => Q[7]~reg0.CLK
+D[0] => Q.DATAA
+D[1] => Q.DATAA
+D[2] => Q.DATAA
+D[3] => Q.DATAA
+D[4] => Q.DATAA
+D[5] => Q.DATAA
+D[6] => Q.DATAA
+D[7] => Q.DATAA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|fourfa:ffa1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+cin => cin.IN1
+s[0] <= fa:fa1.port3
+s[1] <= fa:fa2.port3
+s[2] <= fa:fa3.port3
+s[3] <= fa:fa4.port3
+s[4] <= fa:fa5.port3
+s[5] <= fa:fa6.port3
+s[6] <= fa:fa7.port3
+s[7] <= fa:fa8.port3
+cout <= fa:fa8.port4
+
+
+|Part5|fourfa:ffa1|fa:fa1
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|fourfa:ffa1|fa:fa2
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|fourfa:ffa1|fa:fa3
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|fourfa:ffa1|fa:fa4
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|fourfa:ffa1|fa:fa5
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|fourfa:ffa1|fa:fa6
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|fourfa:ffa1|fa:fa7
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|fourfa:ffa1|fa:fa8
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|decoder:d1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN0
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|decoder:d2
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN0
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|decoder:d3
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN0
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|decoder:d4
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN0
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|decoder:d5
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN0
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|decoder:d6
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN0
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[0] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN1
+bcd[1] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN0
+bcd[2] => seg.IN1
+bcd[2] => seg.IN0
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+bcd[3] => seg.IN1
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+

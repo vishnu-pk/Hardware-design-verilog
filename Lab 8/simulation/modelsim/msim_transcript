@@ -1,0 +1,61 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Part4_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/Masters/Computer\ Hardware\ Design/Lab/Lab\ 8 {E:/Masters/Computer Hardware Design/Lab/Lab 8/ram2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:55:06 on Oct 23,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Masters/Computer Hardware Design/Lab/Lab 8" E:/Masters/Computer Hardware Design/Lab/Lab 8/ram2.v 
+# -- Compiling module ram2
+# 
+# Top level modules:
+# 	ram2
+# End time: 03:55:06 on Oct 23,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/Masters/Computer\ Hardware\ Design/Lab/Lab\ 8 {E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:55:06 on Oct 23,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Masters/Computer Hardware Design/Lab/Lab 8" E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v 
+# -- Compiling module Part4
+# -- Compiling module decoder
+# -- Compiling module slowClock
+# 
+# Top level modules:
+# 	Part4
+# End time: 03:55:06 on Oct 23,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.Part4
+# vsim work.Part4 
+# Start time: 03:55:12 on Oct 23,2019
+# Loading work.Part4
+# ** Error: (vsim-3037) E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v(25): Missing instance name in instantiation of 'ram2'.
+#    Time: 0 ps  Iteration: 0  Instance: /Part4 File: E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v
+# ** Error: (vsim-3037) E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v(26): Missing instance name in instantiation of 'slowClock'.
+#    Time: 0 ps  Iteration: 0  Instance: /Part4 File: E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v
+# Loading work.decoder
+# Error loading design
+# End time: 03:55:12 on Oct 23,2019, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+vsim rtl_work.Part4
+# vsim rtl_work.Part4 
+# Start time: 03:55:38 on Oct 23,2019
+# Loading rtl_work.Part4
+# ** Error: (vsim-3037) E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v(25): Missing instance name in instantiation of 'ram2'.
+#    Time: 0 ps  Iteration: 0  Instance: /Part4 File: E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v
+# ** Error: (vsim-3037) E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v(26): Missing instance name in instantiation of 'slowClock'.
+#    Time: 0 ps  Iteration: 0  Instance: /Part4 File: E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v
+# Loading rtl_work.decoder
+# Error loading design
+# End time: 03:55:38 on Oct 23,2019, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0

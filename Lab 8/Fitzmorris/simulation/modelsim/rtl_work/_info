@@ -1,0 +1,121 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Masters/Computer Hardware Design/Lab/Lab 8/Fitzmorris/simulation/modelsim
+vdecoder
+Z1 !s110 1571858117
+!i10b 1
+!s100 n;W_QjdCS0IePDCcA8;RX0
+ID7FAPMRBc5Le8[eXeSX:?0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1571857980
+Z4 8E:/Masters/Computer Hardware Design/Lab/Lab 8/Fitzmorris/part1.v
+Z5 FE:/Masters/Computer Hardware Design/Lab/Lab 8/Fitzmorris/part1.v
+L0 59
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1571858117.000000
+Z8 !s107 E:/Masters/Computer Hardware Design/Lab/Lab 8/Fitzmorris/part1.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Masters/Computer Hardware Design/Lab/Lab 8/Fitzmorris|E:/Masters/Computer Hardware Design/Lab/Lab 8/Fitzmorris/part1.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work {+incdir+E:/Masters/Computer Hardware Design/Lab/Lab 8/Fitzmorris}
+Z12 tCvgOpt 0
+vmemory1
+R1
+!i10b 1
+!s100 iT=b4;n9AP>K05KD:]`P42
+I8f?R<^b;:eKUSl9bgUKmH3
+R2
+R0
+R3
+R4
+R5
+L0 103
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vpart1
+R1
+!i10b 1
+!s100 W6T3]DbD4=b`O:gUTaA6]0
+I;FGa6<S7DZM2i@O<h3mH@2
+R2
+R0
+R3
+R4
+R5
+L0 147
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vpart1_notb
+R1
+!i10b 1
+!s100 [9DMQ_4=zLLz576@mi?oQ0
+I<27JE6QghJB^<8JAReoSL2
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vslowClock
+R1
+!i10b 1
+!s100 B9K[fVB6`Bd@@Bnn[7dV]3
+IjZ_4?PUjB8Wo;RiYUmDK:2
+R2
+R0
+R3
+R4
+R5
+L0 120
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+nslow@clock

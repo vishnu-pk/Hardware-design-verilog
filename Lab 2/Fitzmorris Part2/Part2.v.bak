@@ -1,0 +1,18 @@
+module Part2(SW, LEDR);
+input [9:0] SW;
+output [9:0] LEDR;
+wire [5:0] A, B, S, Y;
+wire C;
+
+
+assign A = SW[9:5];
+assign B = SW[4:0];
+//Y = A + B;
+
+fivefa ffa1(A,B,S,C)  ;
+// Y -20 
+
+minus20 m1({C,S}, Y);
+
+LEDR [9:5] = Y;
+endmodule

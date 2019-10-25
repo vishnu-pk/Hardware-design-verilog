@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'DFlipFlop:dff2|q[0]'
+Slack : -6.006
+TNS   : -90.876
+
+Type  : Slow 1200mV 85C Model Setup 'KEY[1]'
+Slack : -0.745
+TNS   : -6.291
+
+Type  : Slow 1200mV 85C Model Hold 'KEY[1]'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'DFlipFlop:dff2|q[0]'
+Slack : 1.235
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -47.896
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DFlipFlop:dff2|q[0]'
+Slack : 0.318
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'DFlipFlop:dff2|q[0]'
+Slack : -5.653
+TNS   : -85.324
+
+Type  : Slow 1200mV 0C Model Setup 'KEY[1]'
+Slack : -0.553
+TNS   : -3.066
+
+Type  : Slow 1200mV 0C Model Hold 'KEY[1]'
+Slack : 0.269
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'DFlipFlop:dff2|q[0]'
+Slack : 1.150
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -47.896
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DFlipFlop:dff2|q[0]'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'DFlipFlop:dff2|q[0]'
+Slack : -2.257
+TNS   : -30.996
+
+Type  : Fast 1200mV 0C Model Setup 'KEY[1]'
+Slack : -0.195
+TNS   : -1.769
+
+Type  : Fast 1200mV 0C Model Hold 'DFlipFlop:dff2|q[0]'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'KEY[1]'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -38.097
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DFlipFlop:dff2|q[0]'
+Slack : 0.357
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,480 @@
+Analysis & Synthesis report for Part2
+Wed Sep 18 13:41:26 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Sep 18 13:41:26 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Part2                                       ;
+; Top-level Entity Name              ; Part2                                       ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 13                                          ;
+;     Total combinational functions  ; 13                                          ;
+;     Dedicated logic registers      ; 3                                           ;
+; Total registers                    ; 3                                           ;
+; Total pins                         ; 64                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; Part2              ; Part2              ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Type of Retiming Performed During Resynthesis                    ; Full               ;                    ;
+; Resynthesis Optimization Effort                                  ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                         ; Normal             ;                    ;
+; Use Generated Physical Constraints File                          ; On                 ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; Part2.v                          ; yes             ; User Verilog HDL File  ; E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 13               ;
+;                                             ;                  ;
+; Total combinational functions               ; 13               ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 3                ;
+;     -- 3 input functions                    ; 6                ;
+;     -- <=2 input functions                  ; 4                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 13               ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 3                ;
+;     -- Dedicated logic registers            ; 3                ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 64               ;
+;                                             ;                  ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; decoder0:d6|z[1] ;
+; Maximum fan-out                             ; 13               ;
+; Total fan-out                               ; 143              ;
+; Average fan-out                             ; 0.99             ;
++---------------------------------------------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name   ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
+; |Part2                     ; 13 (1)              ; 3 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 64   ; 0            ; 0          ; |Part2                ; Part2       ; work         ;
+;    |Dflipflop:dff1|        ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Part2|Dflipflop:dff1 ; Dflipflop   ; work         ;
+;    |compute:com1|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Part2|compute:com1   ; compute     ; work         ;
+;    |decoder0:d6|           ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Part2|decoder0:d6    ; decoder0    ; work         ;
+;    |decoder1:d5|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Part2|decoder1:d5    ; decoder1    ; work         ;
+;    |decoder5:d1|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Part2|decoder5:d1    ; decoder5    ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; decoder0:d6|z[1]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder0:d6|z[2]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder0:d6|z[3]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder0:d6|z[4]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder0:d6|z[5]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder0:d6|z[6]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder1:d5|z[1]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder1:d5|z[2]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder1:d5|z[4]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder1:d5|z[5]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder1:d5|z[6]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder2:d4|z[0]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder2:d4|z[1]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder2:d4|z[2]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder2:d4|z[3]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder2:d4|z[5]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder2:d4|z[6]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder3:d3|z[0]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder3:d3|z[1]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder3:d3|z[2]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder3:d3|z[3]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder3:d3|z[6]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder4:d2|z[0]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder4:d2|z[1]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder4:d2|z[2]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder4:d2|z[3]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder4:d2|z[5]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder4:d2|z[6]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder5:d1|z[0]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder5:d1|z[1]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder5:d1|z[2]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder5:d1|z[3]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; decoder5:d1|z[6]                                    ; decoder0:d6|Mux3    ; yes                    ;
+; Number of user-specified and inferred latches = 33  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 64                          ;
+; cycloneiii_ff         ; 3                           ;
+;     CLR               ; 2                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 16                          ;
+;     normal            ; 16                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 3                           ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.89                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Sep 18 13:41:11 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Part2 -c Part2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 9 design units, including 9 entities, in source file part2.v
+    Info (12023): Found entity 1: Part2 File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 1
+    Info (12023): Found entity 2: compute File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 46
+    Info (12023): Found entity 3: decoder5 File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 83
+    Info (12023): Found entity 4: decoder4 File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 100
+    Info (12023): Found entity 5: decoder3 File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 117
+    Info (12023): Found entity 6: decoder2 File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 134
+    Info (12023): Found entity 7: decoder1 File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 151
+    Info (12023): Found entity 8: decoder0 File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 168
+    Info (12023): Found entity 9: Dflipflop File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 185
+Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
+Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
+Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
+Info (12127): Elaborating entity "Part2" for the top level hierarchy
+Warning (10034): Output port "LEDR[9..2]" at Part2.v(5) has no driver File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 5
+Info (12128): Elaborating entity "compute" for hierarchy "compute:com1" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 27
+Warning (10036): Verilog HDL or VHDL warning at Part2.v(53): object "password" assigned a value but never read File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 53
+Info (12128): Elaborating entity "Dflipflop" for hierarchy "Dflipflop:dff1" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 29
+Info (12128): Elaborating entity "decoder5" for hierarchy "decoder5:d1" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 30
+Warning (10270): Verilog HDL Case Statement warning at Part2.v(89): incomplete case statement has no default case item File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Warning (10240): Verilog HDL Always Construct warning at Part2.v(89): inferring latch(es) for variable "z", which holds its previous value in one or more paths through the always construct File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Info (10041): Inferred latch for "z[0]" at Part2.v(89) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Info (10041): Inferred latch for "z[1]" at Part2.v(89) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Info (10041): Inferred latch for "z[2]" at Part2.v(89) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Info (10041): Inferred latch for "z[3]" at Part2.v(89) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Info (10041): Inferred latch for "z[4]" at Part2.v(89) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Info (10041): Inferred latch for "z[5]" at Part2.v(89) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Info (10041): Inferred latch for "z[6]" at Part2.v(89) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Info (12128): Elaborating entity "decoder4" for hierarchy "decoder4:d2" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 31
+Warning (10270): Verilog HDL Case Statement warning at Part2.v(106): incomplete case statement has no default case item File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+Warning (10240): Verilog HDL Always Construct warning at Part2.v(106): inferring latch(es) for variable "z", which holds its previous value in one or more paths through the always construct File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+Info (10041): Inferred latch for "z[0]" at Part2.v(106) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+Info (10041): Inferred latch for "z[1]" at Part2.v(106) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+Info (10041): Inferred latch for "z[2]" at Part2.v(106) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+Info (10041): Inferred latch for "z[3]" at Part2.v(106) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+Info (10041): Inferred latch for "z[4]" at Part2.v(106) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+Info (10041): Inferred latch for "z[5]" at Part2.v(106) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+Info (10041): Inferred latch for "z[6]" at Part2.v(106) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+Info (12128): Elaborating entity "decoder3" for hierarchy "decoder3:d3" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 32
+Warning (10270): Verilog HDL Case Statement warning at Part2.v(123): incomplete case statement has no default case item File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+Warning (10240): Verilog HDL Always Construct warning at Part2.v(123): inferring latch(es) for variable "z", which holds its previous value in one or more paths through the always construct File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+Info (10041): Inferred latch for "z[0]" at Part2.v(123) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+Info (10041): Inferred latch for "z[1]" at Part2.v(123) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+Info (10041): Inferred latch for "z[2]" at Part2.v(123) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+Info (10041): Inferred latch for "z[3]" at Part2.v(123) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+Info (10041): Inferred latch for "z[4]" at Part2.v(123) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+Info (10041): Inferred latch for "z[5]" at Part2.v(123) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+Info (10041): Inferred latch for "z[6]" at Part2.v(123) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+Info (12128): Elaborating entity "decoder2" for hierarchy "decoder2:d4" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 33
+Warning (10270): Verilog HDL Case Statement warning at Part2.v(140): incomplete case statement has no default case item File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+Warning (10240): Verilog HDL Always Construct warning at Part2.v(140): inferring latch(es) for variable "z", which holds its previous value in one or more paths through the always construct File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+Info (10041): Inferred latch for "z[0]" at Part2.v(140) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+Info (10041): Inferred latch for "z[1]" at Part2.v(140) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+Info (10041): Inferred latch for "z[2]" at Part2.v(140) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+Info (10041): Inferred latch for "z[3]" at Part2.v(140) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+Info (10041): Inferred latch for "z[4]" at Part2.v(140) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+Info (10041): Inferred latch for "z[5]" at Part2.v(140) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+Info (10041): Inferred latch for "z[6]" at Part2.v(140) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+Info (12128): Elaborating entity "decoder1" for hierarchy "decoder1:d5" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 34
+Warning (10270): Verilog HDL Case Statement warning at Part2.v(157): incomplete case statement has no default case item File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+Warning (10240): Verilog HDL Always Construct warning at Part2.v(157): inferring latch(es) for variable "z", which holds its previous value in one or more paths through the always construct File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+Info (10041): Inferred latch for "z[0]" at Part2.v(157) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+Info (10041): Inferred latch for "z[1]" at Part2.v(157) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+Info (10041): Inferred latch for "z[2]" at Part2.v(157) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+Info (10041): Inferred latch for "z[3]" at Part2.v(157) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+Info (10041): Inferred latch for "z[4]" at Part2.v(157) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+Info (10041): Inferred latch for "z[5]" at Part2.v(157) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+Info (10041): Inferred latch for "z[6]" at Part2.v(157) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+Info (12128): Elaborating entity "decoder0" for hierarchy "decoder0:d6" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 35
+Warning (10270): Verilog HDL Case Statement warning at Part2.v(174): incomplete case statement has no default case item File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+Warning (10240): Verilog HDL Always Construct warning at Part2.v(174): inferring latch(es) for variable "z", which holds its previous value in one or more paths through the always construct File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+Info (10041): Inferred latch for "z[0]" at Part2.v(174) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+Info (10041): Inferred latch for "z[1]" at Part2.v(174) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+Info (10041): Inferred latch for "z[2]" at Part2.v(174) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+Info (10041): Inferred latch for "z[3]" at Part2.v(174) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+Info (10041): Inferred latch for "z[4]" at Part2.v(174) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+Info (10041): Inferred latch for "z[5]" at Part2.v(174) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+Info (10041): Inferred latch for "z[6]" at Part2.v(174) File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+Warning (12162): EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
+Warning (12163): EDA synthesis tool is specified as "Custom", but VCC is not specified
+Warning (12164): EDA synthesis tool is specified as "Custom", but GND is not specified
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "decoder0:d6|z[6]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+    Info (13026): Duplicate LATCH primitive "decoder0:d6|z[4]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+    Info (13026): Duplicate LATCH primitive "decoder0:d6|z[2]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+    Info (13026): Duplicate LATCH primitive "decoder1:d5|z[5]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+    Info (13026): Duplicate LATCH primitive "decoder1:d5|z[4]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+    Info (13026): Duplicate LATCH primitive "decoder2:d4|z[5]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+    Info (13026): Duplicate LATCH primitive "decoder2:d4|z[2]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+    Info (13026): Duplicate LATCH primitive "decoder2:d4|z[1]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+    Info (13026): Duplicate LATCH primitive "decoder3:d3|z[3]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+    Info (13026): Duplicate LATCH primitive "decoder4:d2|z[2]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+    Info (13026): Duplicate LATCH primitive "decoder5:d1|z[3]" merged with LATCH primitive "decoder0:d6|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+    Info (13026): Duplicate LATCH primitive "decoder4:d2|z[1]" merged with LATCH primitive "decoder0:d6|z[3]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+    Info (13026): Duplicate LATCH primitive "decoder4:d2|z[0]" merged with LATCH primitive "decoder0:d6|z[3]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+    Info (13026): Duplicate LATCH primitive "decoder2:d4|z[3]" merged with LATCH primitive "decoder0:d6|z[5]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+    Info (13026): Duplicate LATCH primitive "decoder2:d4|z[0]" merged with LATCH primitive "decoder0:d6|z[5]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+    Info (13026): Duplicate LATCH primitive "decoder4:d2|z[6]" merged with LATCH primitive "decoder0:d6|z[5]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+    Info (13026): Duplicate LATCH primitive "decoder1:d5|z[2]" merged with LATCH primitive "decoder1:d5|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+    Info (13026): Duplicate LATCH primitive "decoder3:d3|z[6]" merged with LATCH primitive "decoder1:d5|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+    Info (13026): Duplicate LATCH primitive "decoder3:d3|z[2]" merged with LATCH primitive "decoder1:d5|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+    Info (13026): Duplicate LATCH primitive "decoder3:d3|z[1]" merged with LATCH primitive "decoder1:d5|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+    Info (13026): Duplicate LATCH primitive "decoder5:d1|z[6]" merged with LATCH primitive "decoder1:d5|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+    Info (13026): Duplicate LATCH primitive "decoder5:d1|z[0]" merged with LATCH primitive "decoder1:d5|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+    Info (13026): Duplicate LATCH primitive "decoder2:d4|z[6]" merged with LATCH primitive "decoder1:d5|z[6]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 140
+    Info (13026): Duplicate LATCH primitive "decoder3:d3|z[0]" merged with LATCH primitive "decoder1:d5|z[6]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 123
+    Info (13026): Duplicate LATCH primitive "decoder4:d2|z[5]" merged with LATCH primitive "decoder1:d5|z[6]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+    Info (13026): Duplicate LATCH primitive "decoder4:d2|z[3]" merged with LATCH primitive "decoder1:d5|z[6]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 106
+    Info (13026): Duplicate LATCH primitive "decoder5:d1|z[2]" merged with LATCH primitive "decoder5:d1|z[1]" File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+Warning (13012): Latch decoder0:d6|z[1] has unsafe behavior File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Dflipflop:dff1|Q[1] File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 195
+Warning (13012): Latch decoder0:d6|z[3] has unsafe behavior File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Dflipflop:dff1|Q[0] File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 195
+Warning (13012): Latch decoder0:d6|z[5] has unsafe behavior File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 174
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Dflipflop:dff1|Q[0] File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 195
+Warning (13012): Latch decoder1:d5|z[1] has unsafe behavior File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Dflipflop:dff1|Q[1] File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 195
+Warning (13012): Latch decoder1:d5|z[6] has unsafe behavior File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 157
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Dflipflop:dff1|Q[0] File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 195
+Warning (13012): Latch decoder5:d1|z[1] has unsafe behavior File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Dflipflop:dff1|Q[0] File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 195
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 4
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 4
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 4
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 4
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 4
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 4
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 4
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 4
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 4
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 5
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 5
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 5
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 5
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 5
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 5
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 5
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: E:/Masters/Computer Hardware Design/Lab/Lab 4/Fitz lab4/Part2/Part2.v Line: 5
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 14 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Wed Sep 18 13:41:26 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:23
+
+

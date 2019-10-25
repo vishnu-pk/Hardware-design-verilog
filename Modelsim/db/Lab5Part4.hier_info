@@ -1,0 +1,131 @@
+|Lab5Part4
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+KEY[0] => Key0.IN2
+KEY[1] => Key1.IN1
+LEDR[0] <= Morse_Code:U3.Reslt
+CLOCK_10 => ~NO_FANOUT~
+CLOCK_50 => CLOCK_50.IN1
+
+
+|Lab5Part4|Initializer:U1
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Sel[0] => Decoder0.IN2
+Sel[0] => Mux0.IN10
+Sel[0] => Mux1.IN10
+Sel[0] => Mux2.IN10
+Sel[0] => Mux3.IN10
+Sel[0] => Mux4.IN10
+Sel[1] => Decoder0.IN1
+Sel[1] => Mux0.IN9
+Sel[1] => Mux1.IN9
+Sel[1] => Mux2.IN9
+Sel[1] => Mux3.IN9
+Sel[1] => Mux4.IN9
+Sel[2] => Decoder0.IN0
+Sel[2] => Mux0.IN8
+Sel[2] => Mux1.IN8
+Sel[2] => Mux2.IN8
+Sel[2] => Mux3.IN8
+Sel[2] => Mux4.IN8
+reset => reset_S.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5Part4|Counter:U2
+Clock => Cnt[0].CLK
+Clock => Cnt[1].CLK
+Clock => Cnt[2].CLK
+Clock => Cnt[3].CLK
+Clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+reset => Cnt.OUTPUTSELECT
+reset => Cnt.OUTPUTSELECT
+reset => Cnt.OUTPUTSELECT
+reset => Cnt.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5Part4|Morse_Code:U3
+En => Temp[0].CLK
+En => Temp[1].CLK
+En => Temp[2].CLK
+En => Temp[3].CLK
+En => Temp[4].CLK
+En => Temp[5].CLK
+En => Temp[6].CLK
+En => Temp[7].CLK
+En => Temp[8].CLK
+En => Temp[9].CLK
+En => Temp[10].CLK
+En => Temp[11].CLK
+En => Temp[12].CLK
+En => Temp[13].CLK
+En => Temp[14].CLK
+En => Temp[15].CLK
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+LOAD => Temp.OUTPUTSELECT
+Code[0] => Temp.DATAB
+Code[1] => Temp.DATAB
+Code[2] => Temp.DATAB
+Code[3] => Temp.DATAB
+Code[4] => Temp.DATAB
+Code[5] => Temp.DATAB
+Code[6] => Temp.DATAB
+Code[7] => Temp.DATAB
+Code[8] => Temp.DATAB
+Code[9] => Temp.DATAB
+Code[10] => Temp.DATAB
+Code[11] => Temp.DATAB
+Code[12] => Temp.DATAB
+Code[13] => Temp.DATAB
+Code[14] => Temp.DATAB
+Code[15] => Temp.DATAB
+Reslt <= Temp[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,53 @@
+|Part3
+SW[0] => A.IN1
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+KEY[0] => KEY[0].IN1
+KEY[1] => clock.IN1
+LEDR[0] <= Mas:Mas1.port3
+LEDR[1] <= Mas:Mas1.port4
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|Part3|Mas:Mas1
+d => d.IN1
+reset => reset.IN2
+clk => clk.IN1
+q <= Master:Slave.port3
+qbar <= Master:Slave.port4
+
+
+|Part3|Mas:Mas1|Master:Masterr
+d => q~reg0.DATAIN
+d => qbar~reg0.DATAIN
+reset => ~NO_FANOUT~
+clk => qbar~reg0.CLK
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qbar <= qbar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|Mas:Mas1|Master:Slave
+d => q~reg0.DATAIN
+d => qbar~reg0.DATAIN
+reset => ~NO_FANOUT~
+clk => qbar~reg0.CLK
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qbar <= qbar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

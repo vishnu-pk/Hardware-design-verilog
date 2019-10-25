@@ -1,0 +1,3 @@
+module Part6(SW, HEX0, HEX1 );
+
+endmodule

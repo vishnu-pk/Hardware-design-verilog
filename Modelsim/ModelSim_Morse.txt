@@ -1,0 +1,269 @@
+
+Morse Code G:
+
+restart
+force -freeze sim:/Lab5Part4/CLOCK_50 1 0, 0 {10000 ps} -r {20 ns}
+force -freeze sim:/Lab5Part4/U2/Clock 1 0, 0 {50000 ps} -r {100 ns}
+
+force -deposit sim:/Lab5Part4/U1/reset 1 0
+force -deposit sim:/Lab5Part4/U2/reset 1 0
+
+force -deposit {sim:/Lab5Part4/SW[2]} 1 0
+force -deposit {sim:/Lab5Part4/SW[1]} 1 0
+force -deposit {sim:/Lab5Part4/SW[0]} 0 0
+
+force -deposit {sim:/Lab5Part4/KEY[1]} 1 0 ns, 0 90 ns, 1 110 ns
+force -deposit {sim:/Lab5Part4/KEY[0]} 1 0 ns
+
+run 2000 ns
+
+Morse Code DAB:
+
+restart
+force -freeze sim:/Lab5Part4/CLOCK_50 1 0, 0 {10000 ps} -r {20 ns}
+force -freeze sim:/Lab5Part4/U2/Clock 1 0, 0 {50000 ps} -r {100 ns}
+
+force -deposit sim:/Lab5Part4/U1/reset 1 0
+force -deposit sim:/Lab5Part4/U2/reset 1 0
+
+force -deposit {sim:/Lab5Part4/SW[2]} 0 0 ns, 0 1685 ns, 0 2885 ns 
+force -deposit {sim:/Lab5Part4/SW[1]} 1 0 ns, 0 1685 ns, 0 2885 ns
+force -deposit {sim:/Lab5Part4/SW[0]} 1 0 ns, 0 1685 ns, 1 2885 ns
+
+force -deposit {sim:/Lab5Part4/KEY[1]} 1 0 ns, 0 90 ns, 1 110 ns, 0 1690 ns, 1 1710 ns, 0 2890 ns, 1 2910 ns
+force -deposit {sim:/Lab5Part4/KEY[0]} 1 0 ns
+
+run 4750 ns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module Lab5part4 (
+
+input [2:0] SW, 
+input [1:0] KEY,
+output [0:0] LEDR, 
+input CLOCK_50);
+
+	
+	wire [15:0] LED;
+	wire Key0, Key1, Pulse;
+
+	assign Key0 = KEY[0];
+	assign Key1 = KEY[1];
+	
+  modMCounter C1 (
+			.Clock(CLOCK_50), 
+			.En(1'b1),
+			.Q(Pulse)
+		   );
+					
+ 
+  Initializer C2 (
+					.Clk(CLOCK_50), 
+					.Sel(SW[2:0]), 
+					.reset(Key0), 
+					.Q(LED)
+				);
+ 			
+	Morse_Code C3 (
+				.En(Pulse), 
+				.LOAD(Key1), 
+				.Code(LED), 
+				.Reslt(LEDR[0])
+			);
+	
+endmodule 
+
+module Initializer (Clk, Sel, reset, Q);
+
+ input Clk, reset;
+ input [2:0] Sel;
+ 
+ reg reset_S;
+ output reg [15:0] Q;
+ 
+ always @ (posedge reset)
+	begin
+		reset_S <= ~reset_S;
+		end
+	
+	always @ (posedge Clk)
+		begin
+			case(Sel)
+			3'b000: 
+			begin
+			if (reset_S)
+				begin 
+				Q <= 16'b0;
+				end
+			else
+				begin
+				Q <= 16'h001d;	
+				end
+			end
+			3'b001: 
+			begin
+			if (reset_S)
+				begin 
+				Q <= 16'b0;
+				end
+			else
+				begin
+				Q <= 16'h0157;	
+				end	
+			end
+			3'b010: 
+			begin
+			if (reset_S)
+				begin 
+				Q <= 16'b0;
+				end
+			else
+				begin
+				Q <= 16'h05d7;	
+				end	
+			end
+			3'b011: 
+			begin
+			if (reset_S)
+				begin 
+				Q <= 16'b0;
+				end
+			else
+				begin
+				Q <= 16'h0057;	
+				end	
+			end
+			3'b100: 
+			begin
+			if (reset_S)
+				begin 
+				Q <= 16'b0;
+				end
+			else
+				begin
+				Q <= 16'h0001;	
+				end	
+			end
+			3'b101: 
+			begin
+			if (reset_S)
+				begin 
+				Q <= 16'b0;
+				end
+			else
+				begin
+				Q <= 16'h0175;	
+				end	
+			end
+			3'b110:
+			begin 
+			if (reset_S)
+				begin 
+				Q <= 16'b0;
+				end
+			else
+				begin
+				Q <= 16'h0177;	
+				end	
+			end	
+			3'b111: 
+			begin 
+			if (reset_S)
+				begin 
+				Q <= 16'b0;
+				end
+			else
+				begin
+				Q <= 16'h0055;	
+				end	
+			end
+
+		endcase
+
+		end 
+
+endmodule 
+
+module Morse_Code (En, LOAD, Code, Reslt); 
+
+	input  En, LOAD; 
+	input [15:0] Code; 
+
+	output Reslt; 
+
+	reg [15:0] Temp; 
+ 
+  always @ (posedge En) 
+	begin 
+    if (!LOAD) 
+		Temp <= Code; 
+    else 
+      begin 
+        Temp <= Temp >> 1; 
+      end 
+	end 
+	
+  assign Reslt = Temp[0]; 
+
+endmodule 
+
+module modMCounter (Clock, En, Q);
+
+parameter n = 2;
+parameter k = 2;
+
+input Clock, En;
+
+output reg [n-1:0] Q;
+
+reg [26:0] Cnt;
+reg Clk;
+
+always @(posedge Clk) //Synchronus Reset
+
+		begin
+			if (Q == k-1 & En == 1)
+				begin
+				Q <= 1'b0;
+				end
+			else if (En == 1)
+				begin
+				Q <= Q + 1'b1;
+				end
+		end
+
+
+always @(posedge Clock) 
+
+		begin
+				begin
+				Cnt <= Cnt + 1'b1;
+					if(Cnt == 5000000)
+						begin
+						Clk <= ~Clk;
+						Cnt <= 1'b0;
+						end
+				end
+		end
+		
+endmodule

@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Masters/Computer Hardware Design/Lab/Modelsim/simulation/modelsim
+vCounter
+Z1 !s110 1571684562
+!i10b 1
+!s100 IDS4G3BeZ`:=K]_HNCUnT2
+IhP^z?4Remk:2DDR]`n_Di3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1571684490
+Z4 8E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v
+Z5 FE:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v
+L0 150
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1571684561.000000
+Z8 !s107 E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Masters/Computer Hardware Design/Lab/Modelsim|E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work {+incdir+E:/Masters/Computer Hardware Design/Lab/Modelsim}
+Z12 tCvgOpt 0
+n@counter
+vInitializer
+R1
+!i10b 1
+!s100 a64e>KY]Q`=AF>Bk:ABRX0
+I8D<9L2[R?O3fbQF3gE7000
+R2
+R0
+R3
+R4
+R5
+L0 39
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@initializer
+vLab5Part4
+R1
+!i10b 1
+!s100 1o[omM`RjAoFU>E=B0K_N1
+Ij?fIo9LkceOEP=L<FEYEe1
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@lab5@part4
+vMorse_Code
+R1
+!i10b 1
+!s100 GoGKJYVL?0zen?_N<[bXX2
+IGYLmR2@P10gT7fU19ULEj3
+R2
+R0
+R3
+R4
+R5
+L0 180
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@morse_@code

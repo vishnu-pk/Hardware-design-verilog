@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Masters/Computer Hardware Design/Lab/Lab 8/simulation/modelsim
+vdecoder
+Z1 !s110 1571820906
+!i10b 1
+!s100 HB3^6RKlkd13jHRFk_o163
+I8zCYM?>i6ifh8LccOTjHc2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1571820765
+Z4 8E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v
+Z5 FE:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v
+L0 66
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1571820906.000000
+Z8 !s107 E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Masters/Computer Hardware Design/Lab/Lab 8|E:/Masters/Computer Hardware Design/Lab/Lab 8/Part4.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work {+incdir+E:/Masters/Computer Hardware Design/Lab/Lab 8}
+Z12 tCvgOpt 0
+vPart4
+R1
+!i10b 1
+!s100 fK7@mObcC8YV<n4;LDecZ2
+IGzYdX>_CchVQKm4<:b5Ok3
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@part4
+vram2
+R1
+!i10b 1
+!s100 YUDH0;8jO0hS^Y=I_c6co3
+IlAPd;h`B6IXOT<Gh4Q>FW3
+R2
+R0
+w1571817246
+8E:/Masters/Computer Hardware Design/Lab/Lab 8/ram2.v
+FE:/Masters/Computer Hardware Design/Lab/Lab 8/ram2.v
+L0 39
+R6
+r1
+!s85 0
+31
+R7
+!s107 E:/Masters/Computer Hardware Design/Lab/Lab 8/ram2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Masters/Computer Hardware Design/Lab/Lab 8|E:/Masters/Computer Hardware Design/Lab/Lab 8/ram2.v|
+!i113 1
+R10
+R11
+R12
+vslowClock
+R1
+!i10b 1
+!s100 Hm;8`f=BO3<5U0R^QPPK01
+IC7WV@4WKIK3hWoXJhd8c21
+R2
+R0
+R3
+R4
+R5
+L0 110
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+nslow@clock

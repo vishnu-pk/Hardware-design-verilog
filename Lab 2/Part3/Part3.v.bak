@@ -1,0 +1,23 @@
+module Part3(SW,LEDR);
+input [9:0] SW;
+output [9:0] LEDR;
+wire A,B,CIN,S,COUT;
+
+A = SW[0];
+B = SW[1];
+CIN = SW [2];
+
+fa fa1(A,B,CIN,S,COUT);
+
+assign LEDR[0] = S;
+assign LEDR[1] = COUT;
+endmodule;
+
+
+module fa(a,b,cin,s,cout);
+input a,b,cin;
+output s, cout;
+
+assign s = cin xor a xor b;
+assign cout = (a & b) | (b & cin) | (a & cin);
+endmodule  

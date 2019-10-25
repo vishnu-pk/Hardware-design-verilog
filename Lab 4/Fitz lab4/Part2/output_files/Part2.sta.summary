@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Dflipflop:dff1|Q[0]'
+Slack : -2.203
+TNS   : -9.278
+
+Type  : Slow 1200mV 85C Model Setup 'KEY[0]'
+Slack : -0.264
+TNS   : -0.264
+
+Type  : Slow 1200mV 85C Model Hold 'Dflipflop:dff1|Q[0]'
+Slack : -0.251
+TNS   : -0.251
+
+Type  : Slow 1200mV 85C Model Hold 'KEY[0]'
+Slack : 0.752
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'KEY[1]'
+Slack : -0.617
+TNS   : -1.234
+
+Type  : Slow 1200mV 85C Model Removal 'KEY[1]'
+Slack : 1.066
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -5.806
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Dflipflop:dff1|Q[0]'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Dflipflop:dff1|Q[0]'
+Slack : -1.911
+TNS   : -8.153
+
+Type  : Slow 1200mV 0C Model Setup 'KEY[0]'
+Slack : -0.161
+TNS   : -0.161
+
+Type  : Slow 1200mV 0C Model Hold 'Dflipflop:dff1|Q[0]'
+Slack : -0.110
+TNS   : -0.110
+
+Type  : Slow 1200mV 0C Model Hold 'KEY[0]'
+Slack : 0.681
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'KEY[1]'
+Slack : -0.469
+TNS   : -0.938
+
+Type  : Slow 1200mV 0C Model Removal 'KEY[1]'
+Slack : 0.957
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -5.806
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Dflipflop:dff1|Q[0]'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Dflipflop:dff1|Q[0]'
+Slack : -0.816
+TNS   : -3.017
+
+Type  : Fast 1200mV 0C Model Setup 'KEY[0]'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Dflipflop:dff1|Q[0]'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'KEY[0]'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'KEY[1]'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'KEY[1]'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -5.174
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -4.100
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Dflipflop:dff1|Q[0]'
+Slack : 0.448
+TNS   : 0.000
+
+------------------------------------------------------------

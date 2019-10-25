@@ -1,0 +1,76 @@
+|part1
+clock => clock.IN1
+dout[0] <= memory1:DUT.port5
+dout[1] <= memory1:DUT.port5
+dout[2] <= memory1:DUT.port5
+dout[3] <= memory1:DUT.port5
+dout[4] <= memory1:DUT.port5
+dout[5] <= memory1:DUT.port5
+dout[6] <= memory1:DUT.port5
+dout[7] <= memory1:DUT.port5
+
+
+|part1|memory1:DUT
+raddr[0] => memory_array.RADDR
+raddr[1] => memory_array.RADDR1
+raddr[2] => memory_array.RADDR2
+raddr[3] => memory_array.RADDR3
+waddr[0] => memory_array.waddr_a[0].DATAIN
+waddr[0] => memory_array.WADDR
+waddr[1] => memory_array.waddr_a[1].DATAIN
+waddr[1] => memory_array.WADDR1
+waddr[2] => memory_array.waddr_a[2].DATAIN
+waddr[2] => memory_array.WADDR2
+waddr[3] => memory_array.waddr_a[3].DATAIN
+waddr[3] => memory_array.WADDR3
+clock => memory_array.we_a.CLK
+clock => memory_array.waddr_a[4].CLK
+clock => memory_array.waddr_a[3].CLK
+clock => memory_array.waddr_a[2].CLK
+clock => memory_array.waddr_a[1].CLK
+clock => memory_array.waddr_a[0].CLK
+clock => memory_array.data_a[7].CLK
+clock => memory_array.data_a[6].CLK
+clock => memory_array.data_a[5].CLK
+clock => memory_array.data_a[4].CLK
+clock => memory_array.data_a[3].CLK
+clock => memory_array.data_a[2].CLK
+clock => memory_array.data_a[1].CLK
+clock => memory_array.data_a[0].CLK
+clock => dout[0]~reg0.CLK
+clock => dout[1]~reg0.CLK
+clock => dout[2]~reg0.CLK
+clock => dout[3]~reg0.CLK
+clock => dout[4]~reg0.CLK
+clock => dout[5]~reg0.CLK
+clock => dout[6]~reg0.CLK
+clock => dout[7]~reg0.CLK
+clock => memory_array.CLK0
+din[0] => memory_array.data_a[0].DATAIN
+din[0] => memory_array.DATAIN
+din[1] => memory_array.data_a[1].DATAIN
+din[1] => memory_array.DATAIN1
+din[2] => memory_array.data_a[2].DATAIN
+din[2] => memory_array.DATAIN2
+din[3] => memory_array.data_a[3].DATAIN
+din[3] => memory_array.DATAIN3
+din[4] => memory_array.data_a[4].DATAIN
+din[4] => memory_array.DATAIN4
+din[5] => memory_array.data_a[5].DATAIN
+din[5] => memory_array.DATAIN5
+din[6] => memory_array.data_a[6].DATAIN
+din[6] => memory_array.DATAIN6
+din[7] => memory_array.data_a[7].DATAIN
+din[7] => memory_array.DATAIN7
+wren => memory_array.we_a.DATAIN
+wren => memory_array.WE
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

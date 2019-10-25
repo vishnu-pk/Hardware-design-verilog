@@ -1,0 +1,12 @@
+
+State Machine - |Part2|y_Q
+Name y_Q~5 y_Q~4 y_Q~3 y_Q~2 
+y_Q.A 0 0 0 0 
+y_Q.B 0 0 0 1 
+y_Q.C 0 0 1 0 
+y_Q.D 0 0 1 1 
+y_Q.E 0 1 0 0 
+y_Q.F 0 1 0 1 
+y_Q.G 0 1 1 0 
+y_Q.H 0 1 1 1 
+y_Q.I 1 0 0 0 

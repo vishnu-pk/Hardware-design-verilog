@@ -1,0 +1,84 @@
+|Part3
+SW[0] => A[0].IN1
+SW[1] => A[1].IN1
+SW[2] => A[2].IN1
+SW[3] => A[3].IN1
+SW[4] => B[0].IN1
+SW[5] => B[1].IN1
+SW[6] => B[2].IN1
+SW[7] => B[3].IN1
+SW[8] => CIN.IN1
+SW[9] => ~NO_FANOUT~
+LEDR[0] <= fourfa:ffa1.port3
+LEDR[1] <= fourfa:ffa1.port3
+LEDR[2] <= fourfa:ffa1.port3
+LEDR[3] <= fourfa:ffa1.port3
+LEDR[4] <= <GND>
+LEDR[5] <= fourfa:ffa1.port4
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|Part3|fourfa:ffa1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+s[0] <= fa:fa1.port3
+s[1] <= fa:fa2.port3
+s[2] <= fa:fa3.port3
+s[3] <= fa:fa4.port3
+cout <= fa:fa4.port4
+
+
+|Part3|fourfa:ffa1|fa:fa1
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|fourfa:ffa1|fa:fa2
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|fourfa:ffa1|fa:fa3
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|fourfa:ffa1|fa:fa4
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

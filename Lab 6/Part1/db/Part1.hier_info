@@ -1,0 +1,87 @@
+|Part1
+SW[0] => A[0].IN1
+SW[1] => A[1].IN1
+SW[2] => A[2].IN1
+SW[3] => A[3].IN1
+SW[4] => A[4].IN1
+SW[5] => A[5].IN1
+SW[6] => A[6].IN1
+SW[7] => A[7].IN1
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+KEY[0] => ~NO_FANOUT~
+KEY[1] => ~NO_FANOUT~
+HEX5[0] <= decoder:d1.port1
+HEX5[1] <= decoder:d1.port1
+HEX5[2] <= decoder:d1.port1
+HEX5[3] <= decoder:d1.port1
+HEX5[4] <= decoder:d1.port1
+HEX5[5] <= decoder:d1.port1
+HEX5[6] <= decoder:d1.port1
+HEX5[7] <= decoder:d1.port1
+HEX4[0] <= decoder:d2.port1
+HEX4[1] <= decoder:d2.port1
+HEX4[2] <= decoder:d2.port1
+HEX4[3] <= decoder:d2.port1
+HEX4[4] <= decoder:d2.port1
+HEX4[5] <= decoder:d2.port1
+HEX4[6] <= decoder:d2.port1
+HEX4[7] <= decoder:d2.port1
+HEX1[0] <= <GND>
+HEX1[1] <= <GND>
+HEX1[2] <= <GND>
+HEX1[3] <= <GND>
+HEX1[4] <= <GND>
+HEX1[5] <= <GND>
+HEX1[6] <= <GND>
+HEX1[7] <= <GND>
+HEX0[0] <= <GND>
+HEX0[1] <= <GND>
+HEX0[2] <= <GND>
+HEX0[3] <= <GND>
+HEX0[4] <= <GND>
+HEX0[5] <= <GND>
+HEX0[6] <= <GND>
+HEX0[7] <= <GND>
+
+
+|Part1|decoder:d1
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+z[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+z[7] <= <VCC>
+
+
+|Part1|decoder:d2
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+z[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+z[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+z[7] <= <VCC>
+
+

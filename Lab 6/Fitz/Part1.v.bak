@@ -1,0 +1,14 @@
+module Part1(SW,LEDR);
+input [9:0] SW;
+output [9:0] LEDR;
+
+wire [3:0] a,b;
+wire [9:0] c;
+
+assign c = a*b;
+
+assign LEDR = c;
+
+
+
+endmodule 

@@ -1,0 +1,91 @@
+module Part4(SW, HEX0);
+input [9:0] SW;
+output [6:0] HEX0;
+wire [1:0] c;
+assign c[1:0] = SW[1:0];
+
+wire [7:0] top0_out,bottom0_out,mid0_out;
+
+mux16to8 top0(
+.I0(2'b00),
+.I1(2'b01),
+.S(SW[0]),
+.Y(top0_out)
+);
+
+mux16to8 bottom0(
+.I0(2'b10),
+.I1(2'b11),
+.S(SW[0]),
+.Y(bottom0_out)
+);
+
+mux16to8 mid0(
+.I0(top0_out),
+.I1(bottom0_out),
+.S(SW[1]),
+.Y(mid0_out)
+);
+
+
+decoder top0(
+.I0(7'b0100001),
+.I1(7'b0000110),
+.S(c[0]),
+.Y(top0_out)
+);
+
+decoder bottom0(
+.I0(7'b1111001),
+.I1(7'b1000000),
+.S(c[0]),
+.Y(bottom0_out)
+);
+
+decoder mid0(
+.I0(top0_out),
+.I1(bottom0_out),
+.S(c[1]),
+.Y(mid0_out)
+);
+
+assign HEX0[6:0] = mid0_out;
+
+endmodule 
+
+module decoder(I0,I1,S,Y);
+input [7:0] I0,I1;
+input S;
+output [7:0] Y;
+wire [7:0] m;
+
+	assign m[0] = (~S & I0[0]) | (S & I1[0]);
+	assign m[1] = (~S & I0[1]) | (S & I1[1]);
+	assign m[2] = (~S & I0[2]) | (S & I1[2]);
+	assign m[3] = (~S & I0[3]) | (S & I1[3]);
+	assign m[4] = (~S & I0[4]) | (S & I1[4]);
+	assign m[5] = (~S & I0[5]) | (S & I1[5]);
+	assign m[6] = (~S & I0[6]) | (S & I1[6]);
+ 
+	assign Y = m;
+	
+endmodule 
+
+module mux16to8(I0,I1,S,Y);
+input [7:0] I0,I1;
+input S;
+output [7:0] Y;
+wire [7:0] m;
+
+	assign m[0] = (~S & I0[0]) | (S & I1[0]);
+	assign m[1] = (~S & I0[1]) | (S & I1[1]);
+	assign m[2] = (~S & I0[2]) | (S & I1[2]);
+	assign m[3] = (~S & I0[3]) | (S & I1[3]);
+	assign m[4] = (~S & I0[4]) | (S & I1[4]);
+	assign m[5] = (~S & I0[5]) | (S & I1[5]);
+	assign m[6] = (~S & I0[6]) | (S & I1[6]);
+	assign m[7] = (~S & I0[7]) | (S & I1[7]);
+ 
+	assign Y = m;
+	
+endmodule 

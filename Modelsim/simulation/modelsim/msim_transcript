@@ -1,0 +1,103 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab5Part4_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/Masters/Computer\ Hardware\ Design/Lab/Modelsim {E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:02:41 on Oct 21,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Masters/Computer Hardware Design/Lab/Modelsim" E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v 
+# -- Compiling module Lab5Part4
+# -- Compiling module Initializer
+# -- Compiling module Counter
+# -- Compiling module Morse_Code
+# 
+# Top level modules:
+# 	Lab5Part4
+# End time: 14:02:42 on Oct 21,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim work.Lab5Part4
+# vsim work.Lab5Part4 
+# Start time: 14:02:46 on Oct 21,2019
+# Loading work.Lab5Part4
+# Loading work.Initializer
+# Loading work.Counter
+# Loading work.Morse_Code
+# ** Warning: (vsim-3015) E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v(24): [PCDPC] - Port size (1) does not match connection size (32) for port 'Clock'. The port definition is at: E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v(150).
+#    Time: 0 ps  Iteration: 0  Instance: /Lab5Part4/U2 File: E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v
+add wave -position end  sim:/Lab5Part4/CLOCK_50
+add wave -position end  sim:/Lab5Part4/SW
+add wave -position end  sim:/Lab5Part4/KEY
+add wave -position end  sim:/Lab5Part4/U1/Clock
+add wave -position end  sim:/Lab5Part4/U1/Sel
+add wave -position end  sim:/Lab5Part4/U1/Q
+add wave -position 4  sim:/Lab5Part4/U1/reset
+add wave -position end  sim:/Lab5Part4/U2/Clock
+add wave -position end  sim:/Lab5Part4/U2/reset
+add wave -position end  sim:/Lab5Part4/U2/Cnt
+add wave -position end  sim:/Lab5Part4/U2/Q
+add wave -position end  sim:/Lab5Part4/U3/En
+add wave -position end  sim:/Lab5Part4/U3/LOAD
+add wave -position end  sim:/Lab5Part4/U3/Reslt
+
+force -freeze sim:/Lab5part4/CLOCK_50 1 0, 0 {10000 ps} -r {20 ns}
+# ** Error (suppressible): (vsim-4008) Object 'sim:/Lab5part4/CLOCK_50' not found.
+# 
+force -freeze sim:/Lab5part4/U2/Clock 1 0, 0 {50000 ps} -r {100 ns}
+# ** Error (suppressible): (vsim-4008) Object 'sim:/Lab5part4/U2/Clock' not found.
+# 
+
+force -deposit sim:/Lab5part4/U1/reset 1 0
+# ** Error (suppressible): (vsim-4008) Object 'sim:/Lab5part4/U1/reset' not found.
+# 
+force -deposit sim:/Lab5part4/U2/reset 1 0
+# ** Error (suppressible): (vsim-4008) Object 'sim:/Lab5part4/U2/reset' not found.
+# 
+
+force -deposit {sim:/Lab5part4/SW[2]} 0 0 ns, 0 1685 ns, 0 2885 ns 
+# ** Error (suppressible): (vsim-4008) Object 'sim:/Lab5part4/SW[2]' not found.
+# 
+force -deposit {sim:/Lab5part4/SW[1]} 1 0 ns, 0 1685 ns, 0 2885 ns
+# ** Error (suppressible): (vsim-4008) Object 'sim:/Lab5part4/SW[1]' not found.
+# 
+force -deposit {sim:/Lab5part4/SW[0]} 1 0 ns, 0 1685 ns, 1 2885 ns
+# ** Error (suppressible): (vsim-4008) Object 'sim:/Lab5part4/SW[0]' not found.
+# 
+
+force -deposit {sim:/Lab5part4/KEY[1]} 1 0 ns, 0 90 ns, 1 110 ns, 0 1690 ns, 1 1710 ns, 0 2890 ns, 1 2910 ns
+# ** Error (suppressible): (vsim-4008) Object 'sim:/Lab5part4/KEY[1]' not found.
+# 
+force -deposit {sim:/Lab5part4/KEY[0]} 1 0 ns
+# ** Error (suppressible): (vsim-4008) Object 'sim:/Lab5part4/KEY[0]' not found.
+# 
+
+run 4750 ns
+force -freeze sim:/Lab5Part4/CLOCK_50 1 0, 0 {10000 ps} -r {20 ns}
+
+restart
+# ** Warning: (vsim-3015) E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v(24): [PCDPC] - Port size (1) does not match connection size (32) for port 'Clock'. The port definition is at: E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v(150).
+#    Time: 0 ps  Iteration: 0  Instance: /Lab5Part4/U2 File: E:/Masters/Computer Hardware Design/Lab/Modelsim/lab5part4.v
+force -freeze sim:/Lab5Part4/CLOCK_50 1 0, 0 {10000 ps} -r {20 ns}
+force -freeze sim:/Lab5Part4/U2/Clock 1 0, 0 {50000 ps} -r {100 ns}
+
+force -deposit sim:/Lab5Part4/U1/reset 1 0
+force -deposit sim:/Lab5Part4/U2/reset 1 0
+
+force -deposit {sim:/Lab5Part4/SW[2]} 0 0 ns, 0 1685 ns, 0 2885 ns 
+force -deposit {sim:/Lab5Part4/SW[1]} 1 0 ns, 0 1685 ns, 0 2885 ns
+force -deposit {sim:/Lab5Part4/SW[0]} 1 0 ns, 0 1685 ns, 1 2885 ns
+
+force -deposit {sim:/Lab5Part4/KEY[1]} 1 0 ns, 0 90 ns, 1 110 ns, 0 1690 ns, 1 1710 ns, 0 2890 ns, 1 2910 ns
+force -deposit {sim:/Lab5Part4/KEY[0]} 1 0 ns
+
+run 4750 ns
+# End time: 14:11:08 on Oct 21,2019, Elapsed time: 0:08:22
+# Errors: 9, Warnings: 2

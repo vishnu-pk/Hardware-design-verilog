@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -4.378
+TNS   : -58.705
+
+Type  : Slow 1200mV 85C Model Setup 'slowClock:sl1|clk_1Hz'
+Slack : -1.646
+TNS   : -17.053
+
+Type  : Slow 1200mV 85C Model Hold 'slowClock:sl1|clk_1Hz'
+Slack : 0.349
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.646
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -43.687
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'slowClock:sl1|clk_1Hz'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -4.053
+TNS   : -50.844
+
+Type  : Slow 1200mV 0C Model Setup 'slowClock:sl1|clk_1Hz'
+Slack : -1.381
+TNS   : -13.986
+
+Type  : Slow 1200mV 0C Model Hold 'slowClock:sl1|clk_1Hz'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.597
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -43.687
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'slowClock:sl1|clk_1Hz'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.395
+TNS   : -8.404
+
+Type  : Fast 1200mV 0C Model Setup 'slowClock:sl1|clk_1Hz'
+Slack : -0.052
+TNS   : -0.058
+
+Type  : Fast 1200mV 0C Model Hold 'slowClock:sl1|clk_1Hz'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -32.986
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'slowClock:sl1|clk_1Hz'
+Slack : -1.000
+TNS   : -16.000
+
+------------------------------------------------------------
